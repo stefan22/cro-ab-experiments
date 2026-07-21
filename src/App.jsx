@@ -4,6 +4,7 @@ import RevealCard from './RevealCard.jsx'
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const [docsOnly, setDocsOnly] = useState(true)
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 700)
@@ -19,8 +20,19 @@ function App() {
     )
   }
 
+  const visibleExperiments = docsOnly ? experiments.filter((e) => e.hasDocs) : experiments
+
   return (
     <div className="page">
+      <label className="docs-filter">
+        <input
+          type="checkbox"
+          checked={docsOnly}
+          onChange={(e) => setDocsOnly(e.target.checked)}
+        />
+        Experiment docs available
+      </label>
+
       <header className="hero">
         <h1>CRO / AB Testing Experiments</h1>
         <p>
@@ -31,7 +43,7 @@ function App() {
       </header>
 
       <main className="grid">
-        {experiments.map((experiment, index) => (
+        {visibleExperiments.map((experiment, index) => (
           <RevealCard key={experiment.name} experiment={experiment} index={index} />
         ))}
       </main>

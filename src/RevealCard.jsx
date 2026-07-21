@@ -39,7 +39,12 @@ function RevealCard({ experiment, index }) {
         <span className="card__arrow" aria-hidden="true">↗</span>
       </div>
       <p className="card__description">{experiment.description}</p>
-      <span className="card__stack">{experiment.stack}</span>
+      <div className="card__meta">
+        <span className="card__stack">{experiment.stack}</span>
+        <span className={`card__docs${experiment.hasDocs ? ' card__docs--yes' : ''}`}>
+          {experiment.hasDocs ? 'Docs available' : 'No docs'}
+        </span>
+      </div>
     </a>
   )
 }
