@@ -34,9 +34,9 @@ Same data, same links, just a nicer way to browse it:  🚀 &nbsp; [Here](https:
 | `toysrus` | A/B test variation for Toys R Us, injected via vanilla JavaScript | JavaScript/CSS | [toysrus](https://github.com/stefan22/toysrus) |
 | `whitestuff` | Added a sticky "shop by size" filter footer to the product listing page via DOM injection | JavaScript/CSS, HTML | [whitestuff](https://github.com/stefan22/whitestuff) |
 
-## Site
+## About SPA loading this data with React (Vite)
 
-This repo also contains a small React (Vite) page that displays the table above as a card grid, 
+Page displays the table above as a card grid.
 
 ```
 npm install       # install dependencies
