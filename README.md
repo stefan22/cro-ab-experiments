@@ -33,3 +33,15 @@ Same data, same links, just a nicer way to browse it:  🚀 &nbsp; [Here](https:
 | `tkmsterKR12` | Increased visual prominence of primary tickets on the NTF alert to drive more orders | JavaScript/CSS, HTML | [tkmsterKR12](https://github.com/stefan22/tkmsterKR12) |
 | `toysrus` | A/B test variation for Toys R Us, injected via vanilla JavaScript | JavaScript/CSS | [toysrus](https://github.com/stefan22/toysrus) |
 | `whitestuff` | Added a sticky "shop by size" filter footer to the product listing page via DOM injection | JavaScript/CSS, HTML | [whitestuff](https://github.com/stefan22/whitestuff) |
+
+## Site
+
+This repo also contains a small React (Vite) page that displays the table above as a card grid, 
+
+```
+npm install       # install dependencies
+npm run dev       # local dev server
+npm run build     # production build (outputs to dist/)
+npm run deploy    # build + publish dist/ to the gh-pages branch
+```
+
