@@ -31,7 +31,8 @@ function RevealCard({ experiment, index }) {
       target="_blank"
       rel="noopener noreferrer"
       className={`card${visible ? ' card--visible' : ''}`}
-      style={{ transitionDelay: `${Math.min(index % 6, 5) * 60}ms` }}
+      // stagger 6 at a time
+      style={{ transitionDelay: `${(index % 6) * 60}ms` }}
     >
       <div className="card__header">
         <span className="card__name">{experiment.name}</span>
